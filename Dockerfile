@@ -21,10 +21,11 @@ RUN pip3 install plyvel
 RUN ln -sf /bin/bash /bin/sh
 
 WORKDIR /root
-RUN git clone https://github.com/tecnovert/particl-coldstakepool
+RUN git clone https://github.com/xludx/coldstakepool.git
+WORKDIR /root/coldstakepool
+RUN git checkout dockerize
+COPY ./bin/entrypoint.sh /root/coldstakepool/bin/entrypoint.sh
 RUN chmod +x bin/entrypoint.sh
-WORKDIR /root/particl-coldstakepool
 RUN pip3 install .
 
-#COPY . /app/
 

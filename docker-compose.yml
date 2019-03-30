@@ -7,7 +7,7 @@ services:
     ports:
       - 4444:80
     volumes:
-      - ./data/stakepool-testnet:/root/particl-coldstakepool/data/stakepool-testnet
+      - ./data/testnet:/root/coldstakepool/data/testnet
 #    depends_on:
 #      - particld
     command: bin/entrypoint.sh

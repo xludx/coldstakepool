@@ -4,9 +4,14 @@ set -e
 pwd
 ls -al
 
+echo $1
+
 # init
 if [ "$1" = 'init' ]; then
-    set -- coldstakepool-prepare -datadir=~/data/stakepool-testnet -testnet "$@"
+    echo "huhuu1"
+    coldstakepool-prepare -datadir=~/coldstakepool/data/testnet -testnet #"$@"
+    echo "huhuu2"
+    ls -al ~/coldstakepool/data
 fi
 
 # start
@@ -27,4 +32,4 @@ fi
 #	set -- laravel-echo-server "$@"
 #fi
 
-exec "$@" --force
+# exec "$@"
